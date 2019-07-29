@@ -9,19 +9,18 @@ sap.ui.define([
 		onInit: function () {
 			this.oRouter = this.getOwnerComponent().getRouter();
 			this.oModel = this.getOwnerComponent().getModel();
-
-			//this.oRouter.getRoute("master").attachPatternMatched(this._onProductMatched, this);
+			
 			this.oRouter.getRoute("detail").attachPatternMatched(this._onProductMatched, this);
 		},
 		
 		handleFullScreen: function () {
 			var sNextLayout = this.oModel.getProperty("/actionButtonsInfo/midColumn/fullScreen");
-			this.oRouter.navTo("detail", {layout: sNextLayout, product: this._product});
+			this.oRouter.navTo("detail", {layout: sNextLayout});
 		},
 		
 		handleExitFullScreen: function () {
 			var sNextLayout = this.oModel.getProperty("/actionButtonsInfo/midColumn/exitFullScreen");
-			this.oRouter.navTo("detail", {layout: sNextLayout, product: this._product});
+			this.oRouter.navTo("detail", {layout: sNextLayout});
 		},
 		
 		handleClose: function () {
@@ -32,10 +31,12 @@ sap.ui.define([
 		_onProductMatched: function (oEvent) {
 			this._product = oEvent.getParameter("arguments").product || this._product || "0";
 			
-			this.getView().bindElement({
-				path: "/ProductCollection/" + this._product,
-				model: "products"
-			});
+			if(this._product){
+				this.getView().bindElement({
+					path: "/ProductCollection/" + this._product,
+					model: "products"
+				});
+			}
 		}
 	});
 }, true);

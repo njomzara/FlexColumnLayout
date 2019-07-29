@@ -16,7 +16,6 @@ sap.ui.define([
 		},
 		
 		onListItemPress: function (oEvent) {
-			
 			// Get next UI state description to be passed as a paramter
 			// It's actually layout setting for FLC to show two columns 
 			var oNextUIState = this.getOwnerComponent().getHelper().getNextUIState(1);

@@ -12,7 +12,6 @@ sap.ui.define([
 		},
 
 		onBeforeRouteMatched: function(oEvent) {
-			
 			// 1. Get Generic Model 
 			var oModel = this.getOwnerComponent().getModel();
 			
@@ -34,15 +33,6 @@ sap.ui.define([
 		},
 
 		onRouteMatched: function (oEvent) {
-			
-			var sRouteName = oEvent.getParameter("name");
-			var	oArguments = oEvent.getParameter("arguments");
-
-			// Save the current route name
-			// and the product Id
-			this.currentRouteName = sRouteName;
-			this.currentProduct = oArguments.product;
-			
 			// Update current UI state in the Generic Model
 			// Layout property is updated within the object
 			this._updateUIElements();

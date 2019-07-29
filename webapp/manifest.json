@@ -90,7 +90,7 @@
 					]
 				},
 				{
-					"pattern": "detail/{product}/{layout}",
+					"pattern": "detail/{layout}/:product:",
 					"name": "detail",
 					"target": [
 						"master",

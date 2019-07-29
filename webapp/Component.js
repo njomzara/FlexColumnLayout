@@ -21,10 +21,7 @@ sap.ui.define([
 		init: function() {
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
-
-			// set the device model
-			this.setModel(models.createDeviceModel(), "device");
-			
+		
 			// Generic model
 			var oModel = new JSONModel();
 			this.setModel(oModel);
@@ -36,7 +33,6 @@ sap.ui.define([
 			
 			// Initialize Router
 			this.getRouter().initialize();
-		
 		},
 		
 		// Get helper instance for FlexibleColumnLayout
@@ -54,8 +50,6 @@ sap.ui.define([
 			};
 
 			return FlexibleColumnLayoutSemanticHelper.getInstanceFor(oFCL, oSettings);
-			
 		}
-		
 	});
 });
