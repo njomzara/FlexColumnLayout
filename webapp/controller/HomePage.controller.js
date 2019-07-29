@@ -35,11 +35,6 @@ sap.ui.define([
 		onRouteMatched: function (oEvent) {
 			// Update current UI state in the Generic Model
 			// Layout property is updated within the object
-			this._updateUIElements();
-		},
-
-		// Update current UI state in the Generic Model
-		_updateUIElements: function () {
 			var oModel = this.getOwnerComponent().getModel();
 			var oUIState = this.getOwnerComponent().getHelper().getCurrentUIState();
 			oModel.setData(oUIState);
