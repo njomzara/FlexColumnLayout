@@ -16,22 +16,28 @@ sap.ui.define([
 		},
 		
 		onListItemPress: function (oEvent) {
-			var oNextUIState = this.getOwnerComponent().getHelper().getNextUIState(1),
-				productPath = oEvent.getSource().getBindingContext("products").getPath(),
+			
+			// Get next UI state description to be passed as a paramter
+			// It's actually layout setting for FLC to show two columns 
+			var oNextUIState = this.getOwnerComponent().getHelper().getNextUIState(1);
+			
+			// Get Node No from the path in the binding context
+			// Path identifies exact position of the item in the model array
+			var	productPath = oEvent.getSource().getBindingContext("products").getPath(),
 				product = productPath.split("/").slice(-1).pop();
 		
 			this.oRouter.navTo("detail", {layout: oNextUIState.layout, product: product});
 		},
 		
 		onSearch: function (oEvent) {
-			var oTableSearchState = [],
+			var oModelFilter = [],
 				sQuery = oEvent.getParameter("query");
 
 			if (sQuery && sQuery.length > 0) {
-				oTableSearchState = [new Filter("Name", FilterOperator.Contains, sQuery)];
+				oModelFilter = [new Filter("Name", FilterOperator.Contains, sQuery)];
 			}
 
-			this.getView().byId("productsTable").getBinding("items").filter(oTableSearchState);
+			this.getView().byId("productsTable").getBinding("items").filter(oModelFilter);
 		},
 
 		onSort: function (oEvent) {
