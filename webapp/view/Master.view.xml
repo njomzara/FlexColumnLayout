@@ -8,17 +8,17 @@
 		<f:title>
 			<f:DynamicPageTitle>
 				<f:heading>
-					<Title text="Products ({products>/ProductCollectionStats/Counts/Total})"/>
+					<Title text="Requirements Overview"/>
 				</f:heading>
 			</f:DynamicPageTitle>
 		</f:title>
 
 		<!-- DynamicPage Content -->
 		<f:content>
-			<Table id="productsTable"
+			<Table id="requirementsTable"
 				   inset="false"
 				   items="{
-						path: 'products>/ProductCollection',
+						path: 'requirements>/RequirementCollection',
 						sorter: {
 							path: 'Name'
 						}
@@ -34,23 +34,23 @@
 				</headerToolbar>
 				<columns>
 					<Column width="12em">
-						<Text text="Product" />
+						<Text text="Requirement" />
 					</Column>
 					<Column	hAlign="End">
-						<Text text="Price" />
+						<Text text="Status" />
 					</Column>
 				</columns>
 				<items>
 					<ColumnListItem type="Navigation" press="onListItemPress">
 						<cells>
-							<ObjectIdentifier title="{products>Name}" text="{products>ProductId}" />
+							<ObjectIdentifier title="{requirements>RequirementId}" text="{requirements>ProductTxt}" />
 							<ObjectNumber
 									number="{
-										parts:[{path:'products>Price'},{path:'products>CurrencyCode'}],
+										parts:[{path:'requirements>Quantity'},{path:'requirements>Unit'}],
 										type: 'sap.ui.model.type.Currency',
 										formatOptions: {showMeasure: false}
 									}"
-									unit="{products>CurrencyCode}" />
+									unit="{requirements>Unit}" />
 						</cells>
 					</ColumnListItem>
 				</items>

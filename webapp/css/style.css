@@ -1,1 +1,5 @@
 /* Enter your custom styles here */
+.getLargeTitle {
+	font-size: 28px !important;
+	font-weight: bold;
+}

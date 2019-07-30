@@ -22,14 +22,17 @@ sap.ui.define([
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
 		
+			// Set the device model
+			this.setModel(models.createDeviceModel(), "device");
+			
 			// Generic model
 			var oModel = new JSONModel();
 			this.setModel(oModel);
 			
 			// set products demo model on this sample
-			var oProductsModel = new JSONModel("localService/mockdata/products.json");
-			oProductsModel.setSizeLimit(1000);
-			this.setModel(oProductsModel, "products");
+			var oRequirementsModel = new JSONModel("localService/mockdata/requirements.json");
+			oRequirementsModel.setSizeLimit(1000);
+			this.setModel(oRequirementsModel, "requirements");
 			
 			// Initialize Router
 			this.getRouter().initialize();

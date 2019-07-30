@@ -1,0 +1,93 @@
+{
+	"RequirementCollection": [
+		{
+			"RequirementId": "PR1",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_01",
+			"ProductTxt": "Product 1",
+			"Quantity": "2",
+			"Unit": "PCS",
+			"StatusId": "1",
+			"StatusTxt": "Open"
+		},
+		{
+			"RequirementId": "PR2",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_02",
+			"ProductTxt": "Product 2",
+			"Quantity": "5",
+			"Unit": "PCS",
+			"StatusId": "2",
+			"StatusTxt": "Ordered"
+		},
+		{
+			"RequirementId": "PR3",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_03",
+			"ProductTxt": "Product 3",
+			"Quantity": "2",
+			"Unit": "PCS",
+			"StatusId": "3",
+			"StatusTxt": "Received"
+		}
+		,
+		{
+			"RequirementId": "PR4",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_04",
+			"ProductTxt": "Product 4",
+			"Quantity": "6",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		}
+	],
+	"ProductCollectionStats": {
+		"Counts": {
+			"Total": 123,
+			"Weight": {
+				"Ok": 53,
+				"Heavy": 51,
+				"Overweight": 19
+			}
+		}
+	},
+	"ProductCollection": [
+		{
+			"ProductId": "product_01",
+			"ProductTxt": "Product 1",
+			"Unit": "PCS"
+		},{
+			"ProductId": "product_02",
+			"ProductTxt": "Product 2",
+			"Unit": "PCS"
+		},{
+			"ProductId": "product_03",
+			"ProductTxt": "Product 3",
+			"Unit": "PCS"
+		},{
+			"ProductId": "product_04",
+			"ProductTxt": "Product 4",
+			"Unit": "PCS"
+		},{
+			"ProductId": "product_05",
+			"ProductTxt": "Product 5",
+			"Unit": "PCS"
+		}
+	],
+	"RequirementStatus": [
+		{
+			"StatusId": "1",
+			"StatusTxt": "Open"
+		},{
+			"StatusId": "2",
+			"StatusTxt": "Oredered"
+		},{
+			"StatusId": "3",
+			"StatusTxt": "Received"
+		},{
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		}
+	]
+}

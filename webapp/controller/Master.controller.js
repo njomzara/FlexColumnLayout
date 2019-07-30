@@ -22,10 +22,10 @@ sap.ui.define([
 			
 			// Get Node No from the path in the binding context
 			// Path identifies exact position of the item in the model array
-			var	productPath = oEvent.getSource().getBindingContext("products").getPath(),
-				product = productPath.split("/").slice(-1).pop();
+			var	requirementPath = oEvent.getSource().getBindingContext("requirements").getPath(),
+				requirement = requirementPath.split("/").slice(-1).pop();
 		
-			this.oRouter.navTo("detail", {layout: oNextUIState.layout, product: product});
+			this.oRouter.navTo("detail", {layout: oNextUIState.layout, requirement: requirement});
 		},
 		
 		onSearch: function (oEvent) {
@@ -33,18 +33,32 @@ sap.ui.define([
 				sQuery = oEvent.getParameter("query");
 
 			if (sQuery && sQuery.length > 0) {
-				oModelFilter = [new Filter("Name", FilterOperator.Contains, sQuery)];
+				oModelFilter = new Filter({
+							    filters: [
+							      new Filter({
+							        path: 'ProductTxt',
+							        operator: FilterOperator.Contains,
+							        value1: sQuery
+							      }),
+							      new Filter({
+							        path: 'RequirementId',
+							        operator: FilterOperator.Contains,
+							        value1: sQuery
+							      })
+							    ],
+							    or: true|false
+							  });
 			}
 
-			this.getView().byId("productsTable").getBinding("items").filter(oModelFilter);
+			this.getView().byId("requirementsTable").getBinding("items").filter(oModelFilter);
 		},
 
 		onSort: function (oEvent) {
 			this._bDescendingSort = !this._bDescendingSort;
 			var oView = this.getView(),
-				oTable = oView.byId("productsTable"),
+				oTable = oView.byId("requirementsTable"),
 				oBinding = oTable.getBinding("items"),
-				oSorter = new Sorter("Name", this._bDescendingSort);
+				oSorter = new Sorter("RequirementId", this._bDescendingSort);
 
 			oBinding.sort(oSorter);
 		}
