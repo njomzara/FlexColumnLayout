@@ -43,13 +43,9 @@ sap.ui.define([
 			
 			// Get FlexibleColumnLayout Control from the rootView
 			var oFCL = this.getRootControl().byId("fcl");
-			//var oParams = jQuery.sap.getUriParameters();
-			
+		
 			var oSettings = {
 				defaultTwoColumnLayoutType: sap.f.LayoutType.TwoColumnsMidExpanded
-				//mode: oParams.get("mode"),
-				//initialColumnsCount: oParams.get("initial"),
-			    //maxColumnsCount: oParams.get("max")
 			};
 
 			return FlexibleColumnLayoutSemanticHelper.getInstanceFor(oFCL, oSettings);

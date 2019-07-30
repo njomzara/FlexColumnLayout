@@ -74,11 +74,12 @@ sap.ui.define([
                 	this);
             }
            
-            return this.dialog;
+           return this.dialog;
 		},
 		
 		// Add node to the TreeTable
 		onNewRequirement : function(){
+			this._newBusinessFunctionDialog().setModel(this.getView().getModel("requirements"), "products");
 			this._newBusinessFunctionDialog().open();
 		},
 		

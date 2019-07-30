@@ -3,7 +3,7 @@
 	xmlns:l="sap.ui.layout"
 	xmlns:f="sap.ui.layout.form"
 	xmlns:core="sap.ui.core">
-	<Dialog class="sapUiSmallMargin" title="Create new Puchase Requirement" contentWidth="50%">
+	<Dialog class="sapUiSmallMargin" title="Create new Puchase Requirement" contentWidth="50%" >
 		<content>
 			<f:Form id="fEditRequirement"
 						editable="true">
@@ -31,20 +31,18 @@
 										<Select 
 											id="slProduct"
 											items="{
-												path: 'requirements>/ProductCollection',
-												sorter: { path: 'ProductTxt' }
-											}">
-											<core:Item key="{requirements>ProductId}" text="{requirements>ProductTxt}" />
+													path: 'products>/ProductCollection',
+													sorter: { path: 'ProductTxt' }
+												}"
+											>
+											<core:Item key="{products>ProductId}" text="{products>ProductTxt} {products>Unit}" />
 										</Select>
 									</f:fields>
 								</f:FormElement>
 								<f:FormElement label="Quantity">
 									<f:fields>
-										<Input value="" />
-										<Input value="{requirements>Unit}" editable="false">
-											<layoutData>
-												<l:GridData span="XL1 L2 M2 S4" />
-											</layoutData>
+										<Input value="" >
+										
 										</Input>
 									</f:fields>
 								</f:FormElement>
