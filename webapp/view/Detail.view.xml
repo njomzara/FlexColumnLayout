@@ -34,10 +34,12 @@
 						id="btnFormSave"
 						text="Save"
 						type="Success"
+						press="handleSaveRequirementEdit"
 						visible="false"/>
 					<m:Button
 						id="btnFormDelete"
 						text="Delete"
+						press="handleDeleteRequirement"
 						type="Transparent"/>
 				</actions>
 	

@@ -1,0 +1,62 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<Dialog class="sapUiSmallMargin" title="Create new Puchase Requirement" contentWidth="50%">
+		<content>
+			<f:Form id="fEditRequirement"
+						editable="true">
+					<f:layout>
+						<f:ResponsiveGridLayout
+							labelSpanXL="3"
+							labelSpanL="3"
+							labelSpanM="3"
+							labelSpanS="12"
+							adjustLabelSpan="false"
+							emptySpanXL="4"
+							emptySpanL="4"
+							emptySpanM="4"
+							emptySpanS="0"
+							columnsXL="1"
+							columnsL="1"
+							columnsM="1"
+							singleContainerFullSize="false" />
+					</f:layout>
+					<f:formContainers>
+						<f:FormContainer>
+							<f:formElements>
+								<f:FormElement label="Product">
+									<f:fields>
+										<Select 
+											id="slProduct"
+											items="{
+												path: 'requirements>/ProductCollection',
+												sorter: { path: 'ProductTxt' }
+											}">
+											<core:Item key="{requirements>ProductId}" text="{requirements>ProductTxt}" />
+										</Select>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Quantity">
+									<f:fields>
+										<Input value="" />
+										<Input value="{requirements>Unit}" editable="false">
+											<layoutData>
+												<l:GridData span="XL1 L2 M2 S4" />
+											</layoutData>
+										</Input>
+									</f:fields>
+								</f:FormElement>
+							</f:formElements>
+						</f:FormContainer>
+					</f:formContainers>
+				</f:Form>
+	
+		</content>
+		<buttons>
+			<Button type="Reject" text="Cancel" press="onCancelNewRequirement"/>
+			<Button type="Accept" text="Create" press="onCreateNewRequirement"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

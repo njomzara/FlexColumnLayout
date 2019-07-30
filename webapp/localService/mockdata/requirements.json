@@ -40,6 +40,156 @@
 			"Unit": "PCS",
 			"StatusId": "4",
 			"StatusTxt": "Rejected"
+		},
+		{
+			"RequirementId": "PR5",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_04",
+			"ProductTxt": "Product 4",
+			"Quantity": "2",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		},
+		{
+			"RequirementId": "PR6",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_04",
+			"ProductTxt": "Product 4",
+			"Quantity": "9",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		},
+		{
+			"RequirementId": "PR7",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_04",
+			"ProductTxt": "Product 3",
+			"Quantity": "22",
+			"Unit": "PCS",
+			"StatusId": "2",
+			"StatusTxt": "Ordered"
+		},
+		{
+			"RequirementId": "PR8",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_01",
+			"ProductTxt": "Product 1",
+			"Quantity": "1",
+			"Unit": "PCS",
+			"StatusId": "1",
+			"StatusTxt": "Open"
+		},
+		{
+			"RequirementId": "PR9",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_02",
+			"ProductTxt": "Product 2",
+			"Quantity": "6",
+			"Unit": "PCS",
+			"StatusId": "1",
+			"StatusTxt": "Open"
+		},
+		{
+			"RequirementId": "PR10",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_05",
+			"ProductTxt": "Product 5",
+			"Quantity": "11",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		},
+		{
+			"RequirementId": "PR11",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_04",
+			"ProductTxt": "Product 4",
+			"Quantity": "11",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		},
+		{
+			"RequirementId": "PR12",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_02",
+			"ProductTxt": "Product 2",
+			"Quantity": "6",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		},
+		{
+			"RequirementId": "PR13",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_01",
+			"ProductTxt": "Product 1",
+			"Quantity": "3",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		},
+		{
+			"RequirementId": "PR14",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_04",
+			"ProductTxt": "Product 4",
+			"Quantity": "18",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		},
+		{
+			"RequirementId": "PR15",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_05",
+			"ProductTxt": "Product 5",
+			"Quantity": "6",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		},
+		{
+			"RequirementId": "PR16",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_03",
+			"ProductTxt": "Product 3",
+			"Quantity": "6",
+			"Unit": "PCS",
+			"StatusId": "1",
+			"StatusTxt": "Open"
+		},
+		{
+			"RequirementId": "PR17",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_04",
+			"ProductTxt": "Product 4",
+			"Quantity": "12",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		},
+		{
+			"RequirementId": "PR18",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_04",
+			"ProductTxt": "Product 4",
+			"Quantity": "6",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
+		},
+		{
+			"RequirementId": "PR19",
+			"CreationDate": "01.01.2019",
+			"ProductId": "product_04",
+			"ProductTxt": "Product 4",
+			"Quantity": "8",
+			"Unit": "PCS",
+			"StatusId": "4",
+			"StatusTxt": "Rejected"
 		}
 	],
 	"ProductCollectionStats": {

@@ -1,7 +1,8 @@
 sap.ui.define([
 	"sap/ui/model/json/JSONModel",
-	"sap/ui/core/mvc/Controller"
-], function (JSONModel, Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageBox"
+], function (JSONModel, Controller, MessageBox) {
 	"use strict";
 
 	return Controller.extend("com.get.FelxColumnApp.controller.Detail", {
@@ -28,16 +29,20 @@ sap.ui.define([
 		},
 		
 		handleClose: function () {
+			if(this._bEditMode){
+				this._toggleActionButtonAndFragments(this._bEditMode);
+			}
 			var sNextLayout = this.oModel.getProperty("/actionButtonsInfo/midColumn/closeColumn");
 			this.oRouter.navTo("master", {layout: sNextLayout});
 		},
 		
 		// Handle EDIT Requirement Button Press
 		handleEditDisplayPress: function() {
-			this._toggleButtonsAndView(this._bEditMode);
+			this._toggleActionButtonAndFragments(this._bEditMode);
 		},
 		
-		_toggleButtonsAndView: function (bEditMode) {
+		// Handle action buttons state and load proper fragment
+		_toggleActionButtonAndFragments: function (bEditMode) {
 			
 			var oView = this.getView();
 			
@@ -93,6 +98,30 @@ sap.ui.define([
 
 			pageSubsection.removeAllBlocks();
 			pageSubsection.addBlock(this._getFormFragment(sFragmentName));
+		},
+			
+		// Handle SAVE Requirement edit
+		handleSaveRequirementEdit: function (){
+			MessageBox.confirm(
+				"Save changes for this Requirement?", {
+					styleClass: "sapUiSizeCompact",
+					onClose: function(oAction){
+						
+					}
+				}
+			);
+		},	
+		
+		// Handle DELETE Requirement 
+		handleDeleteRequirement: function (){
+			MessageBox.confirm(
+				"Are you sure you want to delete requirement?", {
+					styleClass: "sapUiSizeCompact",
+					onClose: function(oAction){
+						
+					}
+				}
+			);
 		}
 			
 	});

@@ -61,6 +61,40 @@ sap.ui.define([
 				oSorter = new Sorter("RequirementId", this._bDescendingSort);
 
 			oBinding.sort(oSorter);
+		},
+		
+		// Return instance of New Requiremnet Dialog
+		_newBusinessFunctionDialog : function(){
+			// create a fragment with dialog, and pass the selected data
+            if (!this.dialog) {
+                // This fragment can be instantiated from a controller as follows:
+                this.dialog = sap.ui.xmlfragment(
+                	this.getView().getId(),
+                	"com.get.FelxColumnApp.fragment.NewRequirement",
+                	this);
+            }
+           
+            return this.dialog;
+		},
+		
+		// Add node to the TreeTable
+		onNewRequirement : function(){
+			this._newBusinessFunctionDialog().open();
+		},
+		
+		onCreateNewRequirement: function(){
+			MessageBox.confirm(
+				"Create New Requirement?", {
+					styleClass: "sapUiSizeCompact",
+					onClose: function(oAction){
+						
+					}
+				}
+			);
+		},
+		
+		onCancelNewRequirement: function(){
+			this._newBusinessFunctionDialog().close();
 		}
 		
 	});
